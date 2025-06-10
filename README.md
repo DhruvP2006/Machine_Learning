@@ -23,4 +23,35 @@
 
   b. Regression - predict continous values eg: price of stocks, house etc.
 
-- Model
+- Training a Model
+  We have a matrix of data which has many feature on the basis of which we predict a class.
+  Each row is a sample of data and each column is a unique feature and the last column is the class.
+  Feature Vector - One row of features of sample of data.
+  Target - Output of the Feature Vector.
+  Feature Matrix (X) - The matrix of all the features.
+  Labels/targes vector (Y) - The matrix of all the outputs
+
+- Dividing the Dataset.
+  We divide the dataset into 3 sets i.e. The Training Dataset, The Validation Dataset & The Testing Dataset
+
+- Loss
+  It is the difference between the prediciton of the model and the Label / actual value.
+
+- Loss Function
+
+  1. L1 Loss = Σ |y_real - y_predicted|
+  2. L2 Loss = Σ (|y_real - y_predicted|)^2
+  3. Binary Corss-Entropy Loss
+
+- Accuracy
+  Percentage of correct predictions out of all the predictions.
+
+- Steps to Training a Model
+  We feed the model a Feature Vector and then compare the models output to the corresponding Target.
+  Training - Modifing the model to minimize the difference between the models output and the actual target is the porcess of training the model.
+
+  We feed the entire training data set into the model and then compare the predictions with the targets the diffierence in value is known as the Loss. Accordingly we make adjustments i.e. training.
+
+  After many such iterations we feed the model the validation set, but this time the loss is not used for further training the model.
+
+  Next we compare the Losses of all the models in hand and chosse the model with the lowest loss and feed it the Test Set and this gives us the Final Reported Performance
