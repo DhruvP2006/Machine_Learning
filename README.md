@@ -55,3 +55,51 @@
   After many such iterations we feed the model the validation set, but this time the loss is not used for further training the model.
 
   Next we compare the Losses of all the models in hand and chosse the model with the lowest loss and feed it the Test Set and this gives us the Final Reported Performance
+
+- Various Models
+
+  1. K-Nearest Neighbours
+     K is an odd number
+     We plot a graph with all the features as the axis, and the points that form on the graph are the labels
+     To predict what the label of a collection of features might be we observer the k closest labels and decide that label based on the majority.
+
+      For K = 1
+                   precision    recall  f1-score   support
+
+           0       0.76      0.67      0.71      1362
+           1       0.83      0.88      0.85      2442
+
+    accuracy                           0.80      3804
+   macro avg       0.79      0.78      0.78      3804
+weighted avg       0.80      0.80      0.80      3804
+
+      For K = 3
+                  precision    recall  f1-score   support
+
+           0       0.72      0.73      0.73      1334
+           1       0.86      0.85      0.85      2470
+
+    accuracy                           0.81      3804
+   macro avg       0.79      0.79      0.79      3804
+weighted avg       0.81      0.81      0.81      3804
+
+      For K = 5
+                  precision    recall  f1-score   support
+
+           0       0.74      0.74      0.74      1341
+           1       0.86      0.85      0.86      2463
+
+    accuracy                           0.82      3804
+   macro avg       0.80      0.80      0.80      3804
+weighted avg       0.82      0.82      0.82      3804
+
+  2. Naive Bayes
+  
+                  precision    recall  f1-score   support
+
+           0       0.72      0.40      0.52      1374
+           1       0.73      0.91      0.81      2430
+
+    accuracy                           0.73      3804
+   macro avg       0.73      0.66      0.66      3804
+weighted avg       0.73      0.73      0.71      3804
