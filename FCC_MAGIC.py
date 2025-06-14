@@ -83,4 +83,14 @@ lg_model = lg_model.fit(x_train, y_train)
 
 y_pred = lg_model.predict(x_test)
 
+# print(classification_report(y_test, y_pred))
+
+# Support Vector Machine
+from sklearn.svm import SVC
+
+svm_model = SVC()
+svm_model = svm_model.fit(x_train, y_train)
+
+y_pred = svm_model.predict(x_test)
+
 print(classification_report(y_test, y_pred))

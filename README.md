@@ -105,6 +105,7 @@ weighted avg       0.82      0.82      0.82      3804
 weighted avg       0.73      0.73      0.71      3804
 
   3. Logistic Regression
+    We have a plot with the label (1/0) on the Y-axis and a single feature on the X-axis
                 precision    recall  f1-score   support
 
            0       0.70      0.72      0.71      1336
@@ -113,4 +114,17 @@ weighted avg       0.73      0.73      0.71      3804
     accuracy                           0.79      3804
    macro avg       0.77      0.78      0.77      3804
 weighted avg       0.79      0.79      0.79      3804
-  
+
+  4. Support Vector Mechine (SVM) 
+    We have a plot witḣ features on the X and Y axis, we draw a line which divides the labels equally. We draw a line along the labels close to the dividing line and these are known as margins and the labels are know as support vecotrs
+
+                  precision    recall  f1-score   support
+
+           0       0.79      0.81      0.80      1318
+           1       0.90      0.89      0.89      2486
+
+    accuracy                           0.86      3804
+   macro avg       0.85      0.85      0.85      3804
+weighted avg       0.86      0.86      0.86      3804
+
+  5. Neural Networks
