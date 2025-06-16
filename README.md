@@ -116,7 +116,7 @@ weighted avg       0.73      0.73      0.71      3804
 weighted avg       0.79      0.79      0.79      3804
 
   4. Support Vector Mechine (SVM) 
-    We have a plot witḣ features on the X and Y axis, we draw a line which divides the labels equally. We draw a line along the labels close to the dividing line and these are known as margins and the labels are know as support vecotrs
+    We have a plot with features on the X and Y axis, we draw a line which divides the labels equally. We draw a line along the labels close to the dividing line and these are known as margins and the labels are know as support vecotrs
 
                   precision    recall  f1-score   support
 
@@ -128,4 +128,47 @@ weighted avg       0.79      0.79      0.79      3804
 weighted avg       0.86      0.86      0.86      3804
 
   5. Neural Networks
-  
+    There are multiple layers in a Neural net, each layer is known as a Neuron.
+    We have an input where all of the features are inputed. All the inputs are weighted by a number which is special for each feature that means a feauture say x1 is multiplied by a weight x1 and so on. These weighted features are then added to form a Neuron, to which we add a bias term, which gives us an activation function.
+    Without an activation function, our neural net just becomes a linear model. Egs. of an activation function are: 
+    1. The sigmoid function 
+      ![Sigmoid Function](./Readme_imgs/sigmoid.png)
+    
+    2. tanh Function
+      ![tanh Function](./Readme_imgs/tanh.png)
+    
+    3. RELU
+      ![RELU Function](./Readme_imgs/relu.png)
+
+    These are non-linear functions. These functions basically makes our network non-linear i.e. we cannot backtrack the function to get the original input.
+
+  6. Linear Regression
+      We plot our features as the axis and draw a line, plane and so on based on the number of axis, which best fits our data.
+      
+      residual/error: The distance between the actual value and the prediction
+      
+      To get the best fit line, we try to minimize the sum of the residuals
+      
+      Simple Linear Regression: y = a + bx
+      Multiple Linear Regression: y = a + b_1x_1 + b_2x_2 + ........... b_nx_n
+
+      Assumptions:
+        1. Linearity - The data follows a linear pattern
+        2. Independence - All the points are independent from each other and have no inffluence on one another.
+        3. Normality - If we plot a graph for the Residuals, then they should follow a normal distribution.
+        4. Homoskedasticity - In simple terms, the points should be spread apart evenly.
+
+      Evaluation:
+      1. Mean Absolute Error (MAE)
+        It gives us the accuracy of our model.
+        MAE = Sum of Residual / No. of Data points
+
+      2. Mean Squared Error (MSE)
+        MSE = Sum of Residual^2 / No. of Data Points
+
+      3. Root Mean Square Error (RMSE)
+        RMSE = (Sum of Residual^2 / No. of Data Points)^1/2  
+
+      4. R^2 - Coefficient of Determination
+        TSS = Sum of (differences in value and mean value)^2
+        R^2 = 1-  (Sum of Residual^2/TSS) 
