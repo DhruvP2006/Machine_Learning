@@ -75,3 +75,40 @@ all_reg = LinearRegression()
 all_reg.fit(x_train_all, y_train_all)
 
 print(all_reg.score(x_test_all, y_test_all)) #0.45731765372923894
+
+# Regression with Neural Net
+def plot_loss(history):
+    plt.plot(history.history['loss'], label='loss')
+    plt.plot(history.history['val_loss'], label='val_loss')
+    plt.xlabel('Epoch')
+    plt.ylabel('MSE')
+    plt.legend()
+    plt.grid(True)
+    plt.savefig("Epoch_vs_MSE.png")
+    plt.close()
+
+temp_normailizer = tf.keras.layers.Normalization(input_shape=(1,), axis=None)
+temp_normailizer.adapt(x_train_temp.reshape(-1))
+
+temp_nn_model = tf.keras.Sequential([
+  temp_normailizer,
+  tf.keras.layers.Dense(1)
+])
+
+temp_nn_model.compile(optimizer=tf.keras.optimizers.Adam(learning_rate=0.1), loss="mean_squared_error")
+
+history = temp_nn_model.fit(
+  x_train_temp.reshape(-1), y_train_temp, verbose=0, epochs=1000, validation_data=(x_val_temp, y_val_temp)
+)
+
+# plot_loss(history)
+
+plt.scatter(x_train_temp, y_train_temp, label="Data", color="blue")
+x = tf.linspace(-20, 40, 100)
+plt.plot(x, temp_nn_model.predict(np.array(x).reshape(-1, 1)), label="Fit", color="red", linewidth=3)
+plt.legend()
+plt.title("Bikes vs Temp")
+plt.ylabel("Number of Bikes")
+plt.xlabel("Temp")
+plt.savefig("NN_Bikes_vs_Temp.png")
+plt.close()
