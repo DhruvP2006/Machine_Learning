@@ -6,13 +6,13 @@ import cv2
 model = torch.hub.load('C:/Users/dhruv/OneDrive/Documents/GitHub/Machine Learning/YOLO/yolov5/', 'yolov5s', source='local')
 
 # Detections Using Images
-img = "./car.jpg"
-results = model(img)
-results.print()
+# img = "./Car.jpg"
+# results = model(img)
+# results.print()
 
-plt.imshow(np.squeeze(results.render()))
-plt.savefig("render-car.png")
-plt.close()
+# plt.imshow(np.squeeze(results.render()))
+# plt.savefig("render-car.png")
+# plt.close()
 
 #Real time Detection
 cap = cv2.VideoCapture(0)
